@@ -1,7 +1,3 @@
-## React Starter Kit — "isomorphic" web app boilerplate
-
-[![Support us on Bountysource](https://dl.dropboxusercontent.com/u/16006521/react-starter-kit/banner.png)](https://salt.bountysource.com/teams/react-starter-kit)<br>
-
 > [React Starter Kit](http://www.reactstarterkit.com) is an opinionated
 > boilerplate for web development built on top of Facebook's
 > [React](https://facebook.github.io/react/) library,
@@ -11,21 +7,6 @@
 > [Babel](http://babeljs.io/) and [BrowserSync](http://www.browsersync.io/).
 > Helping you to stay productive following the best practices. A solid starting
 > point for both professionals and newcomers to the industry.
-
-Demo: http://demo.reactstarterkit.com &nbsp;|&nbsp;
-Join [#react-starter-kit](https://gitter.im/kriasoft/react-starter-kit) chatroom on Gitter to stay up to date.
-
-### Documentation
-
- * **General**
-   - [React Style Guide](./docs/react-style-guide.md)
-   - [How to configure text editors and IDEs](./docs/how-to-configure-text-editors.md)
- * **Questions**
-   - [Which module bundler should I use?](https://github.com/kriasoft/react-starter-kit/issues/3)
-   - [Which Flux implementation should I use?](https://github.com/kriasoft/react-starter-kit/issues/22)
- * **Recipes**
-   - [How to Implement Routing and Navigation](./docs/recipes/how-to-implement-routing.md)
-   - [How to Integrate Disqus](./docs/recipes/how-to-integrate-disqus.md)
 
 ### Directory Layout
 
@@ -119,27 +100,6 @@ Test any javascript module by creating a `__tests__/` directory where
 the file is. Name the test by appending `-test.js` to the js file.
 [Jest](https://facebook.github.io/jest/) will do the rest.
 
-### Customizations
-
- * [Azure deployment](https://github.com/kriasoft/react-starter-kit/pull/106)
-
-### Related Projects
-
- * [React Static Boilerplate](https://github.com/koistya/react-static-boilerplate) — Generates a static website from React components
- * [Babel Starter Kit](https://github.com/kriasoft/babel-starter-kit) — A boilerplate for authoring JavaScript/React.js libraries
- * [React Decorators](https://github.com/kriasoft/react-decorators) — A collection of higher-order React components
-
-### Learn More
-
- * [Getting Started with React.js](http://facebook.github.io/react/)
- * [React.js Wiki on GitHub](https://github.com/facebook/react/wiki)
- * [React.js Questions on StackOverflow](http://stackoverflow.com/questions/tagged/reactjs)
- * [React.js Discussion Board](https://discuss.reactjs.org/)
- * [Flux Architecture for Building User Interfaces](http://facebook.github.io/flux/)
- * [Jest - Painless Unit Testing](http://facebook.github.io/jest/)
- * [Flow - A static type checker for JavaScript](http://flowtype.org/)
- * [The Future of React](https://github.com/reactjs/react-future)
- * [Learn ES6](https://babeljs.io/docs/learn-es6/), [ES6 Features](https://github.com/lukehoban/es6features#readme)
 
 ### Support
 
@@ -153,6 +113,3 @@ Copyright © 2014-2015 Kriasoft, LLC. This source code is licensed under the MIT
 license found in the [LICENSE.txt](https://github.com/kriasoft/react-starter-kit/blob/master/LICENSE.txt)
 file. The documentation to the project is licensed under the
 [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) license.
-
----
-Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/react-starter-kit/graphs/contributors)
