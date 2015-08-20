@@ -16,12 +16,7 @@ const router = new Router(on => {
     return component && <App context={state.context}>{component}</App>;
   });
 
-  on('/contact', async () => <ContactPage />);
-
-  on('*', async (state) => {
-    const content = await http.get(`/api/content?path=${state.path}`);
-    return content && <ContentPage {...content} />;
-  });
+  on('*', async () => <ContactPage />);
 
   on('error', (state, error) => state.statusCode === 404 ?
     <App context={state.context} error={error}><NotFoundPage /></App> :
