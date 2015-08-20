@@ -17,8 +17,8 @@ class Header {
             <span className="Header-brandTxt">Quartet Health</span>
           </a>
           <div className="Header-banner">
-            <h1 className="Header-bannerTitle">PH-Q9 Test</h1>
-            <p className="Header-bannerDesc">PH-Q9 Test for depression</p>
+            <h1 className="Header-bannerTitle">Coding Exercise</h1>
+            <p className="Header-bannerDesc">Nicolas Moise</p>
           </div>
         </div>
       </div>

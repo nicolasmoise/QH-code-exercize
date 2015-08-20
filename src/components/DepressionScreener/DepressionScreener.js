@@ -1,7 +1,7 @@
 /*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 
 import React, { PropTypes } from 'react';
-import styles from './ContactPage.css';
+import styles from './DepressionScreener.css';
 import withStyles from '../../decorators/withStyles';
 
 @withStyles(styles)
@@ -12,11 +12,11 @@ class ContactPage {
   };
 
   render() {
-    let title = 'Contact Us';
+    let title = 'PH-Q9 Depression Screener';
     this.context.onSetTitle(title);
     return (
-      <div className="ContactPage">
-        <div className="ContactPage-container">
+      <div className="DepressionScreener">
+        <div className="DepressionScreener-container">
           <h1>{title}</h1>
           <p>...</p>
         </div>
