@@ -8,9 +8,9 @@ import withStyles from '../../decorators/withStyles';
 class QuestionList {
 
   render() {
-    var QuestionNodes = this.props.questions.map(function (question) {
+    var QuestionNodes = this.props.questions.map(function (question, index) {
       return (
-        <div>{question}</div>
+        <div>{index+1}. {question.text}</div>
       );
     });
 
