@@ -47,9 +47,12 @@ class DepressionScreener {
     return (
       <div className="DepressionScreener">
         <div className="DepressionScreener-container">
-          <h1>{title}</h1>
-          <p>{generalPrompt}</p>
-          <QuestionList mcQuestions={questions} />
+          <form>
+            <h1>{title}</h1>
+            <p>{generalPrompt}</p>
+            <QuestionList mcQuestions={questions} />
+            <input type="submit" value="Submit"/>
+          </form>
         </div>
       </div>
     );

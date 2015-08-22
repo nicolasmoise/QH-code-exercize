@@ -11,11 +11,14 @@ class MultipleChoiceQuestion {
     var that = this;
 
     var answerNodes = this.props.question.answers.map(function(answer, index){
+      
       var name = 'question'+ that.props.question.key;
+      
       var score = answer.score;
+      
       return (
         <div key={index}>
-          <input type="radio" name={name} value={score} />
+          <input type="radio" name={name} value={score} required='true'/>
           <span>{answer.text}</span>
         </div>
       );
