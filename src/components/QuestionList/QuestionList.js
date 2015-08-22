@@ -3,21 +3,22 @@
 import React, { PropTypes } from 'react';
 import styles from './QuestionList.css';
 import withStyles from '../../decorators/withStyles';
+import MultipleChoiceQuestion from '../MultipleChoiceQuestion';
 
 @withStyles(styles)
 class QuestionList {
 
   render() {
-    var QuestionNodes = this.props.questions.map(function (question, index) {
-      return (
-        <div>{index+1}. {question.text}</div>
-      );
-    });
 
     return (
       <div className="QuestionList">
         <div className="QuestionList-container">
-          {QuestionNodes}
+          {this.props.mcQuestions.map(function (question, index) {
+            question.key = index;
+            return (
+              <MultipleChoiceQuestion key={question.key} question={question}/>
+            );
+          })}
         </div>
       </div>
     );

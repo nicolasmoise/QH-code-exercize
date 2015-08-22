@@ -1,0 +1,6 @@
+{
+  "name": "MultipleChoiceQuestion",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MultipleChoiceQuestion.js"
+}

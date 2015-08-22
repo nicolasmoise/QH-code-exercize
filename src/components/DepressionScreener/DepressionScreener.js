@@ -49,7 +49,7 @@ class DepressionScreener {
         <div className="DepressionScreener-container">
           <h1>{title}</h1>
           <p>{generalPrompt}</p>
-          <QuestionList questions={questions} />
+          <QuestionList mcQuestions={questions} />
         </div>
       </div>
     );
