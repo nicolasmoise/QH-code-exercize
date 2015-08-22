@@ -1,0 +1,6 @@
+{
+  "name": "DepressionScreenerResult",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./DepressionScreenerResult.js"
+}

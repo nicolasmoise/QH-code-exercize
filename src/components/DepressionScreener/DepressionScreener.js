@@ -5,7 +5,8 @@
 import React, { PropTypes } from 'react';
 import styles from './DepressionScreener.css';
 import withStyles from '../../decorators/withStyles';
-import QuestionList from '../QuestionList';
+import MultipleChoiceQuestion from '../MultipleChoiceQuestion';
+import DepressionScreenerResult from '../DepressionScreenerResult';
 
 @withStyles(styles)
 
@@ -18,7 +19,11 @@ class DepressionScreener extends React.Component {
     onSetTitle: PropTypes.func.isRequired
   };
 
-  state = {view: 'test'};
+  state = {
+    view: 'test'
+  };
+
+  score = 0;
 
   questions = [
     'Little interest or pleasure in doing things?',
@@ -45,16 +50,14 @@ class DepressionScreener extends React.Component {
   calculateScore = function (e){
     e.preventDefault();
     var form = e.target;
-    var score = 0
     for (var i=0; i<this.questions.length; i++){
-      score += parseInt(form.elements['question'+i].value);
+      this.score += parseInt(form.elements['question'+i].value);
     }
     this.setState({view: 'results'});
   }
 
   render() {
     var title = 'Patient Health Questionnaire (PHQ-9)';
-    var generalPrompt = 'Over the last two weeks, how often have you been bothered by any of the following problems?';
 
     this.context.onSetTitle(title);
 
@@ -62,9 +65,18 @@ class DepressionScreener extends React.Component {
       <div className="DepressionScreener-container">
         <form name="DepressionScreenerForm" onSubmit={this.calculateScore.bind(this)}>
           <h1>{title}</h1>
-          <p>{generalPrompt}</p>
-          <QuestionList mcQuestions={this.questions} />
-          <input type="submit" value="See your` Score"/>
+          <p>'Over the last two weeks, how often have you been bothered by any of the following problems?'</p>
+          
+          {this.questions.map(function (question, index) {
+            question.key = index;
+
+            return (
+              <MultipleChoiceQuestion key={question.key} question={question}/>
+            );
+
+          })}
+
+          <input type="submit" value="See your Score"/>
         </form>
       </div>
     );
@@ -72,7 +84,7 @@ class DepressionScreener extends React.Component {
     return (
       <div className="DepressionScreener">
         { this.state.view === 'test' ? Questionaire : null }
-        { this.state.view === 'results' ? <div>Results</div>: null}
+        { this.state.view === 'results' ? <DepressionScreenerResult score={this.score} /> : null}
       </div>
     );
   }
