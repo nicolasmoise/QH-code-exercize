@@ -7,18 +7,20 @@ import withStyles from '../../decorators/withStyles';
 @withStyles(styles)
 class MultipleChoiceQuestion {
 
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    answers: React.PropTypes.array.isRequired
+  };
+
   render() {
     var that = this;
 
-    var answerNodes = this.props.question.answers.map(function(answer, index){
-      
-      var name = 'question'+ that.props.question.key;
-      
-      var score = answer.score;
-      
+    var answerNodes = this.props.answers.map(function(answer, index){
+
       return (
         <div key={index}>
-          <input type="radio" name={name} value={score} required='true'/>
+          <input type="radio" name={that.props.name} value={answer.value} required={that.props.required}/>
           <span>{answer.text}</span>
         </div>
       );
@@ -27,7 +29,7 @@ class MultipleChoiceQuestion {
     return (
       <div className="MultipleChoiceQuestion">
         <div className="MultipleChoiceQuestion-container">
-          <p>{this.props.question.text}</p>
+          <p>{this.props.text}</p>
           {answerNodes}
         </div>
       </div>

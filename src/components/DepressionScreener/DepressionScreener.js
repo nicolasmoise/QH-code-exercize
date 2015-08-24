@@ -13,7 +13,7 @@ import DepressionScreenerResult from '../DepressionScreenerResult';
 
 class DepressionScreener extends React.Component {
 
-  
+
 
   static contextTypes = {
     onSetTitle: PropTypes.func.isRequired
@@ -35,14 +35,15 @@ class DepressionScreener extends React.Component {
     'Trouble concentrating on things, such as reading the newspaper or watching television?',
     'Moving or speaking so slowly that other people could have noticed?\nOr the opposite - being so fidgety or restless that you have been moving around a lot more than usual?',
     'Thoughts that you would be better off dead, or of hurting yourself in some way?'
-  ].map(function(text){
+  ].map(function(text, i){
     return {
       text: text,
-      answers : [        
-        {text: 'Not at all', score: 0},
-        {text: 'Several Days', score: 1},
-        {text: 'More than half the days', score: 2},
-        {text: 'Nearly every day', score: 3}
+      name: 'PHQ-9-question-' + i,
+      answers : [
+        {text: 'Not at all', value: 0},
+        {text: 'Several Days', value: 1},
+        {text: 'More than half the days', value: 2},
+        {text: 'Nearly every day', value: 3}
       ]
     };
   });
@@ -51,7 +52,7 @@ class DepressionScreener extends React.Component {
     e.preventDefault();
     var form = e.target;
     for (var i=0; i<this.questions.length; i++){
-      this.score += parseInt(form.elements['question'+i].value);
+      this.score += parseInt(form.elements['PHQ-9-question-' + i].value);
     }
     this.setState({view: 'results'});
   }
@@ -65,13 +66,12 @@ class DepressionScreener extends React.Component {
       <div className="DepressionScreener-container">
         <form name="DepressionScreenerForm" onSubmit={this.calculateScore.bind(this)}>
           <h1>{title}</h1>
-          <p>'Over the last two weeks, how often have you been bothered by any of the following problems?'</p>
-          
-          {this.questions.map(function (question, index) {
-            question.key = index;
+          <p>Over the last two weeks, how often have you been bothered by any of the following problems?</p>
+
+          {this.questions.map(function (q) {
 
             return (
-              <MultipleChoiceQuestion key={question.key} question={question}/>
+              <MultipleChoiceQuestion key={q.name} text={q.text} answers={q.answers} required="true" name={q.name}/>
             );
 
           })}
