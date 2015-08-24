@@ -13,10 +13,13 @@ import TherapistPicker from '../TherapistPicker';
 
 class DepressionScreenerResult extends React.Component {
 
+  static propTypes = {
+    score: PropTypes.number.isRequired, } /* the score you obtained on the PHQ-9 test */
+  };
 
   render() {
 
-    var score = parseInt(this.props.score);
+    var score = this.props.score;
     var severity;
     var mustSeeTherapist = false;
     var therapists = [
@@ -42,11 +45,11 @@ class DepressionScreenerResult extends React.Component {
 
     return (
       <div className="DepressionScreenerResults">
-      <div className="DepressionScreenerResults-container">
-      <div>{"Result: "+ score + " / 27"}</div>
-      <div>{"Depression Severity: " + severity}</div>
-      { mustSeeTherapist === true ? <TherapistPicker therapists={therapists} /> : null }
-      </div>
+        <div className="DepressionScreenerResults-container">
+          <div>{"Result: "+ score + " / 27"}</div>
+          <div>{"Depression Severity: " + severity}</div>
+          { mustSeeTherapist === true ? <TherapistPicker therapists={therapists} /> : null }
+        </div>
       </div>
     );
   }

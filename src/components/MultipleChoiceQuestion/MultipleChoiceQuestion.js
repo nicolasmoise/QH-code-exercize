@@ -8,10 +8,10 @@ import withStyles from '../../decorators/withStyles';
 class MultipleChoiceQuestion {
 
   static propTypes = {
-    text: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    answers: React.PropTypes.array.isRequired,
-    required: React.PropTypes.bool
+    text: PropTypes.string.isRequired, /* the prompt of your question */
+    name: PropTypes.string.isRequired, /* the name of your question to indentify it in the form */
+    answers: React.PropTypes.array.isRequired,  /* an array of {text: .. , value: .. } answer objects */
+    required: React.PropTypes.bool  /* wether or not the question is required */
   };
 
   render() {
