@@ -1,3 +1,5 @@
+### What I did
+
 
 
 ### Directory Layout
@@ -12,7 +14,6 @@
 │   ├── /actions/               # Action creators that allow to trigger a dispatch to stores
 │   ├── /components/            # React components
 │   ├── /constants/             # Constants (action types etc.)
-│   ├── /content/               # Static content (plain HTML or Markdown, Jade, you name it)
 │   ├── /core/                  # Core components (Flux dispatcher, base classes, utilities)
 │   ├── /decorators/            # Higher-order React components
 │   ├── /public/                # Static files which are copied into the /build/public folder
@@ -21,6 +22,7 @@
 │   ├── /utils/                 # Utility classes and functions
 │   ├── /app.js                 # Client-side startup script
 │   └── /server.js              # Server-side startup script
+│   └── /router.js              # React Routing
 ├── /tools/                     # Build automation scripts and utilities
 │── package.json                # The list of 3rd party libraries and utilities
 │── preprocessor.js             # ES6 transpiler settings for Jest
