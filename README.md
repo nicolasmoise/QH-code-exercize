@@ -1,5 +1,9 @@
 ### What I did
 
+The exercize was built and divided into different React.js components as follows:
+
+- (The main test component)[https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/DepressionScreener]
+
 
 
 ### Directory Layout
