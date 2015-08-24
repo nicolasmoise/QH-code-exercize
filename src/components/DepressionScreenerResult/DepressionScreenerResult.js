@@ -14,8 +14,8 @@ import TherapistPicker from '../TherapistPicker';
 class DepressionScreenerResult extends React.Component {
 
   static propTypes = {
-    score: PropTypes.number.isRequired, } /* the score you obtained on the PHQ-9 test */
-  };
+    score: PropTypes.number.isRequired /* the score you obtained on the PHQ-9 test */
+  }
 
   render() {
 
