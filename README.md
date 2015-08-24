@@ -30,7 +30,7 @@
 ### Getting Started
 
 ```shell
-$ git clone 
+$ git clone https://github.com/nicolasmoise/QH-code-exercize.git -b master
 $ cd QH-code-exercize
 $ npm install                   # Install Node.js components listed in ./package.json
 $ npm start                     # Compile and launch
