@@ -1,0 +1,36 @@
+.TherapistPicker {
+  border: 1px solid #222;
+  background-color: #777;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.TherapistPicker-container {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.TherapistPicker-prompt {
+  font-weight: bold;
+}
+
+.TherapistPicker-list {
+  margin: 10px 0;
+  border: 1px solid #444;
+}
+
+.Therapist-container {
+  padding: 3px;
+}
+
+.Therapist-container:nth-child(odd) {
+  background-color: white;
+}
+
+.Therapist-container:nth-child(even) {
+  background-color: #999;
+}
+
+.Therapist-selector, .Therapist-name, .Therapist-tel {
+  margin-left:10px;
+}

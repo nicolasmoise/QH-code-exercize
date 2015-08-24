@@ -25,6 +25,8 @@ class DepressionScreener extends React.Component {
 
   score = 0;
 
+  //Build the array of PH-Q9 question objects [ { text: .. , name: .. , answers: .. } ]
+
   questions = [
     'Little interest or pleasure in doing things?',
     'Feeling down, depressed, or hopeless?',
@@ -36,9 +38,12 @@ class DepressionScreener extends React.Component {
     'Moving or speaking so slowly that other people could have noticed?\nOr the opposite - being so fidgety or restless that you have been moving around a lot more than usual?',
     'Thoughts that you would be better off dead, or of hurting yourself in some way?'
   ].map(function(text, i){
+
+    var questionNumber = i +1;
+
     return {
-      text: text,
-      name: 'PHQ-9-question-' + i,
+      text: questionNumber + '. ' + text,
+      name: 'PHQ-9-question-' + questionNumber,
       answers : [
         {text: 'Not at all', value: 0},
         {text: 'Several Days', value: 1},
@@ -51,7 +56,7 @@ class DepressionScreener extends React.Component {
   calculateScore = function (e){
     e.preventDefault();
     var form = e.target;
-    for (var i=0; i<this.questions.length; i++){
+    for (var i=1; i <= this.questions.length; i++){
       this.score += parseInt(form.elements['PHQ-9-question-' + i].value);
     }
     this.setState({view: 'results'});
@@ -63,28 +68,24 @@ class DepressionScreener extends React.Component {
     this.context.onSetTitle(title);
 
     var Questionaire = (
-      <div className="DepressionScreener-container">
-        <form name="DepressionScreenerForm" onSubmit={this.calculateScore.bind(this)}>
+        <form name="DepressionScreener-form" onSubmit={this.calculateScore.bind(this)}>
           <h1>{title}</h1>
           <p>Over the last two weeks, how often have you been bothered by any of the following problems?</p>
-
-          {this.questions.map(function (q) {
-
-            return (
-              <MultipleChoiceQuestion key={q.name} text={q.text} answers={q.answers} required="true" name={q.name}/>
-            );
-
-          })}
-
+          <div className="DepressionScreener-questionList">
+            {this.questions.map(function (q) {
+              return ( <MultipleChoiceQuestion key={q.name} text={q.text} answers={q.answers} required={true} name={q.name}/> );
+            })}
+          </div>
           <input type="submit" value="See your Score"/>
         </form>
-      </div>
     );
 
     return (
       <div className="DepressionScreener">
-        { this.state.view === 'test' ? Questionaire : null }
-        { this.state.view === 'results' ? <DepressionScreenerResult score={this.score} /> : null}
+        <div className="DepressionScreener-container">
+          { this.state.view === 'test' ? Questionaire : null }
+          { this.state.view === 'results' ? <DepressionScreenerResult score={this.score} /> : null}
+        </div>
       </div>
     );
   }

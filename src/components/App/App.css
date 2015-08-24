@@ -166,3 +166,33 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+input[type="submit"] {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 900;
+  margin: 5px 5px;
+  padding: 7px 20px;
+}
+input[type="submit"]:hover {
+  background-color: #333333;
+}
+input[type="submit"]:active {
+  -webkit-box-shadow: inset 0px 2px 2px #000000;
+  -moz-box-shadow: inset 0px 2px 2px #000000;
+  box-shadow: inset 0px 2px 2px #000000;
+  margin-top: 2px;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}

@@ -27,8 +27,8 @@ class TherapistPicker extends React.Component {
           return (
             <div className="Therapist-container" key={therapist.id}>
               <span className="Therapist-name">{therapist.name}</span>
-              <span className="Therapist-phone">{therapist.telephone}</span>
-              <input type="radio" name="therapist" value={therapist.id} required/>
+              <span className="Therapist-tel">{therapist.tel}</span>
+              <input className="Therapist-selector" type="radio" name="therapist" value={therapist.id} required/>
             </div>
           );
         })}

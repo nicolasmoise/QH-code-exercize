@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import React, { PropTypes } from 'react';
 import styles from './MultipleChoiceQuestion.css';
 import withStyles from '../../decorators/withStyles';
@@ -21,8 +19,12 @@ class MultipleChoiceQuestion {
 
       return (
         <div key={index}>
-          <input type="radio" name={that.props.name} value={answer.value} required={that.props.required}/>
-          <span>{answer.text}</span>
+          {
+            that.props.required ?
+            <input type="radio" name={that.props.name} value={answer.value} required />
+            : <input type="radio" name={that.props.name} value={answer.value} />
+          }
+          <span className="MultipleChoiceAnswer-text">{answer.text}</span>
         </div>
       );
     });
@@ -30,8 +32,10 @@ class MultipleChoiceQuestion {
     return (
       <div className="MultipleChoiceQuestion">
         <div className="MultipleChoiceQuestion-container">
-          <p>{this.props.text}</p>
-          {answerNodes}
+          <div className="MultipleChoiceQuestion-prompt">{this.props.text}</div>
+          <div className="MultipleChoiceAnswers-container">
+            {answerNodes}
+          </div>
         </div>
       </div>
     );
