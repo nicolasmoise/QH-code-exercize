@@ -1,5 +1,7 @@
 ### What I did
 
+I used https://github.com/kriasoft/react-starter-kit as my base and built on top of it.
+
 The exercize was built and divided into different React.js components as follows:
 
 - [The main test component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/DepressionScreener) contains all the questions and the logic for calculating the score
