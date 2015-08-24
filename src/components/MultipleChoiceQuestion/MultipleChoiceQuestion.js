@@ -10,7 +10,8 @@ class MultipleChoiceQuestion {
   static propTypes = {
     text: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    answers: React.PropTypes.array.isRequired
+    answers: React.PropTypes.array.isRequired,
+    required: React.PropTypes.bool
   };
 
   render() {

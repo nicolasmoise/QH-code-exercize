@@ -1,4 +1,5 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Component that displays the results of the PHQ-9 Test */
+/* Displays for depression severity and lets you chose a therapist if it's required*/
 
 'use strict';
 
