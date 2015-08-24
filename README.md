@@ -1,12 +1,4 @@
-> [React Starter Kit](http://www.reactstarterkit.com) is an opinionated
-> boilerplate for web development built on top of Facebook's
-> [React](https://facebook.github.io/react/) library,
-> [Node.js](https://nodejs.org/) / [Express](http://expressjs.com/) server
-> and [Flux](http://facebook.github.io/flux/) architecture. Containing
-> modern web development tools such as [Webpack](http://webpack.github.io/),
-> [Babel](http://babeljs.io/) and [BrowserSync](http://www.browsersync.io/).
-> Helping you to stay productive following the best practices. A solid starting
-> point for both professionals and newcomers to the industry.
+
 
 ### Directory Layout
 
@@ -37,13 +29,9 @@
 
 ### Getting Started
 
-Just [clone](github-windows://openRepo/https://github.com/kriasoft/react-starter-kit) or
-[fork](https://github.com/kriasoft/react-starter-kit/fork) the repo and start hacking:
-
 ```shell
-$ git clone -o react-starter-kit -b master --single-branch \
-      https://github.com/kriasoft/react-starter-kit.git MyApp
-$ cd MyApp
+$ git clone 
+$ cd QH-code-exercize
 $ npm install                   # Install Node.js components listed in ./package.json
 $ npm start                     # Compile and launch
 ```
@@ -66,50 +54,3 @@ $ npm start                     # or, `npm start -- release`
 
 This will start a lightweight development server with "live reload" and
 synchronized browsing across multiple devices and browsers.
-
-### How to Deploy
-
-```shell
-$ npm run deploy                # or, `npm run deploy -- production`
-```
-
-For more information see `tools/deploy.js`.
-
-### How to Update
-
-You can always fetch and merge the recent changes from this repo back into
-your own project:
-
-```shell
-$ git checkout master
-$ git fetch react-starter-kit
-$ git merge react-starter-kit/master
-$ npm install
-```
-
-### How to Test
-
-Run unit tests powered by [Jest](https://facebook.github.io/jest/) with the following
-[npm](https://www.npmjs.org/doc/misc/npm-scripts.html) command:
-
-```shell
-$ npm test
-```
-
-Test any javascript module by creating a `__tests__/` directory where
-the file is. Name the test by appending `-test.js` to the js file.
-[Jest](https://facebook.github.io/jest/) will do the rest.
-
-
-### Support
-
- * [#react-starter-kit](https://gitter.im/kriasoft/react-starter-kit) on Gitter
- * [Live help sessions](http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=react-starter-kit) on Thinkful
- * [@koistya](https://www.codementor.io/koistya) on Codementor
-
-### License
-
-Copyright © 2014-2015 Kriasoft, LLC. This source code is licensed under the MIT
-license found in the [LICENSE.txt](https://github.com/kriasoft/react-starter-kit/blob/master/LICENSE.txt)
-file. The documentation to the project is licensed under the
-[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) license.
