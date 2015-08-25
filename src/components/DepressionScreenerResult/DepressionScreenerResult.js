@@ -1,8 +1,3 @@
-/* React Component that displays the results of the PHQ-9 Test */
-/* Displays for depression severity and lets you chose a therapist if it's required*/
-
-'use strict';
-
 import React, { PropTypes } from 'react';
 import styles from './DepressionScreenerResult.css';
 import withStyles from '../../decorators/withStyles';
@@ -46,7 +41,7 @@ class DepressionScreenerResult extends React.Component {
     return (
       <div className="DepressionScreenerResult">
         <div className="DepressionScreenerResult-container">
-          <div>{"Result: "+ score + " / 27"}</div>
+          <div>{'Result: '+ score + ' / 27'}</div>
           <div>
             <label>Depression Severity: </label>
             <span className="DepressionScreenerResult-severity">{severity}</span>

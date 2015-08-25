@@ -1,6 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
-'use strict';
 
 import React, { PropTypes } from 'react';
 import styles from './DepressionScreener.css';
@@ -19,9 +16,7 @@ class DepressionScreener extends React.Component {
     onSetTitle: PropTypes.func.isRequired
   };
 
-  state = {
-    view: 'test'
-  };
+  state = {view: 'test', displayErrorMsg: false};
 
   score = 0;
 
@@ -56,10 +51,16 @@ class DepressionScreener extends React.Component {
   calculateScore = function (e){
     e.preventDefault();
     var form = e.target;
-    for (var i=1; i <= this.questions.length; i++){
-      this.score += parseInt(form.elements['PHQ-9-question-' + i].value);
+    if (!e.target.checkValidity()) {
+      //The form uses native form validation but some browsers (Safari) will still submit the form
+      //Most browsers will not fire this handler if form is not valid
+      this.setState({displayErrorMsg : true});
+    } else {
+      for (var i=1; i <= this.questions.length; i++){
+        this.score += parseInt(form.elements['PHQ-9-question-' + i].value);
+      }
+      this.setState({view: 'results'});
     }
-    this.setState({view: 'results'});
   }
 
   render() {
@@ -77,6 +78,7 @@ class DepressionScreener extends React.Component {
             })}
           </div>
           <input type="submit" value="See your Score"/>
+          {this.state.displayErrorMsg ? <div className='DepressionScreener-error'>Please fill out all the questions</div> : null }
         </form>
     );
 

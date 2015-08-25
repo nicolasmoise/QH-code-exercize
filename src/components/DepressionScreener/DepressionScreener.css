@@ -11,3 +11,7 @@
 .DepressionScreener-questionList {
   padding: 10px;
 }
+
+.DepressionScreener-error {
+  color: red;
+}
