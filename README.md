@@ -50,7 +50,7 @@ As you can see, most of my work was done in the components directory. The PHQ-9 
 
 ### Getting Started
 
-Dependencies : node.js (0.12.7 recolmmended), Xcode (for mac users, needed for npm)
+Dependencies : node.js (version 0.12.7 recommended), Xcode (for mac users)
 
 ```shell
 $ git clone https://github.com/nicolasmoise/QH-code-exercize.git -b master
