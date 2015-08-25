@@ -1,13 +1,15 @@
-### What I did
+### Introduction
 
 I used https://github.com/kriasoft/react-starter-kit as my base and built on top of it.
 
 The exercize was built and divided into different React.js components as follows:
 
 - [The Depression Screener component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/DepressionScreener) contains all the questions and the logic for calculating the score
-- [The Depression Screener Result component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/DepressionScreenerResult) displays the result based on your PHQ-9 test
+- [The Depression Screener Result component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/DepressionScreenerResult) displays the result based on your PHQ-9 test and recommends therapists if need be
 - [The Multiple Choice Question component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/MultipleChoiceQuestion) a re-usable component to create multiple choice questions
 - [The Therapist Picker component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/TherapistPicker) a re-usable component that allow you to select a therapist from a list
+
+The form uses the native HTML5 validation. I did not include any unit tests for my components but these would definetly be necessary if this was an actual project.
 
 
 
