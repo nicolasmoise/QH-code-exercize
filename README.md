@@ -9,7 +9,7 @@ The exercize was built and divided into different React.js components as follows
 - [The Multiple Choice Question component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/MultipleChoiceQuestion) a re-usable component to create multiple choice questions
 - [The Therapist Picker component](https://github.com/nicolasmoise/QH-code-exercize/tree/master/src/components/TherapistPicker) a re-usable component that allow you to select a therapist from a list
 
-The form uses the native HTML5 validation. I did not include any unit tests for my components but these would definetly be necessary if this was an actual project.
+As you can see, most of my work was done in the components directory. The PHQ-9 test form uses the native HTML5 validation. I did not include any Jest unit tests for my components but these would be necessary if this was an actual project.
 
 
 
