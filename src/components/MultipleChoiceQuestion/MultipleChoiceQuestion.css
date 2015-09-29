@@ -1,11 +1,11 @@
-.MultipleChoiceQuestion-container {
+.MultipleChoiceQuestion__container {
   padding: 5px;
   margin-bottom: 10px;
 }
 
-.MultipleChoiceAnswer-text {
+.MultipleChoiceAnswer__text {
   margin-left: 5px;
 }
- .MultipleChoiceAnswers-container {
+ .MultipleChoiceAnswers__container {
    padding: 10px;
  }
