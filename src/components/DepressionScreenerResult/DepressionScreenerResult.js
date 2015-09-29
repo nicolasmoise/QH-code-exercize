@@ -40,11 +40,11 @@ class DepressionScreenerResult extends React.Component {
 
     return (
       <div className="DepressionScreenerResult">
-        <div className="DepressionScreenerResult-container">
+        <div className="DepressionScreenerResult__container">
           <div>{'Result: '+ score + ' / 27'}</div>
           <div>
             <label>Depression Severity: </label>
-            <span className="DepressionScreenerResult-severity">{severity}</span>
+            <span className="DepressionScreenerResult__severity">{severity}</span>
           </div>
           { mustSeeTherapist === true ? <TherapistPicker therapists={therapists} /> : null }
         </div>
