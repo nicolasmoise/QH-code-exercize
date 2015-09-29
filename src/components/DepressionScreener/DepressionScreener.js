@@ -69,22 +69,22 @@ class DepressionScreener extends React.Component {
     this.context.onSetTitle(title);
 
     var Questionaire = (
-        <form name="DepressionScreener-form" onSubmit={this.calculateScore.bind(this)}>
+        <form name="DepressionScreener__form" onSubmit={this.calculateScore.bind(this)}>
           <h1>{title}</h1>
           <p>Over the last two weeks, how often have you been bothered by any of the following problems?</p>
-          <div className="DepressionScreener-questionList">
+          <div className="DepressionScreener__questionList">
             {this.questions.map(function (q) {
               return ( <MultipleChoiceQuestion key={q.name} text={q.text} answers={q.answers} required={true} name={q.name}/> );
             })}
           </div>
           <input type="submit" value="See your Score"/>
-          {this.state.displayErrorMsg ? <div className='DepressionScreener-error'>Please fill out all the questions</div> : null }
+          {this.state.displayErrorMsg ? <div className='DepressionScreener__error'>Please fill out all the questions</div> : null }
         </form>
     );
 
     return (
       <div className="DepressionScreener">
-        <div className="DepressionScreener-container">
+        <div className="DepressionScreener__container">
           { this.state.view === 'test' ? Questionaire : null }
           { this.state.view === 'results' ? <DepressionScreenerResult score={this.score} /> : null}
         </div>
