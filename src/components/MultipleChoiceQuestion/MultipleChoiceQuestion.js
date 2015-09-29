@@ -24,16 +24,16 @@ class MultipleChoiceQuestion {
             <input type="radio" name={that.props.name} value={answer.value} required />
             : <input type="radio" name={that.props.name} value={answer.value} />
           }
-          <span className="MultipleChoiceAnswer-text">{answer.text}</span>
+          <span className="MultipleChoiceAnswer__text">{answer.text}</span>
         </div>
       );
     });
 
     return (
       <div className="MultipleChoiceQuestion">
-        <div className="MultipleChoiceQuestion-container">
-          <div className="MultipleChoiceQuestion-prompt">{this.props.text}</div>
-          <div className="MultipleChoiceAnswers-container">
+        <div className="MultipleChoiceQuestion__container">
+          <div className="MultipleChoiceQuestion__prompt">{this.props.text}</div>
+          <div className="MultipleChoiceAnswers__container">
             {answerNodes}
           </div>
         </div>
