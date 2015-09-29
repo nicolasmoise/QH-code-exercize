@@ -1,8 +1,8 @@
-.DepressionScreenerResult-container {
+.DepressionScreenerResult__container {
   padding: 10px;
 }
 
-.DepressionScreenerResult-severity {
+.DepressionScreenerResult__severity {
   font-weight: bold;
   font-size: 25px;
 }
