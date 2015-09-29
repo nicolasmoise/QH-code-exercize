@@ -5,32 +5,32 @@
   margin: 5px;
 }
 
-.TherapistPicker-container {
+.TherapistPicker__container {
   margin: 0 auto;
   padding: 10px;
 }
 
-.TherapistPicker-prompt {
+.TherapistPicker__prompt {
   font-weight: bold;
 }
 
-.TherapistPicker-list {
+.TherapistPicker__list {
   margin: 10px 0;
   border: 1px solid #444;
 }
 
-.Therapist-container {
+.Therapist__container {
   padding: 3px;
 }
 
-.Therapist-container:nth-child(odd) {
+.Therapist__container:nth-child(odd) {
   background-color: white;
 }
 
-.Therapist-container:nth-child(even) {
+.Therapist__container:nth-child(even) {
   background-color: #999;
 }
 
-.Therapist-selector, .Therapist-name, .Therapist-tel {
+.Therapist__selector, .Therapist__name, .Therapist__tel {
   margin-left:10px;
 }
