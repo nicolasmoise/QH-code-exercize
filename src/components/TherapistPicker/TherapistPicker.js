@@ -19,14 +19,14 @@ class TherapistPicker extends React.Component {
   render() {
     var therapistSelectionForm = (
       <form onSubmit={this.selectTherapist.bind(this)}>
-        <div className="TherapistPicker-prompt">Please select a therapist: </div>
-        <div className="TherapistPicker-list">
+        <div className="TherapistPicker__prompt">Please select a therapist: </div>
+        <div className="TherapistPicker__list">
         {this.props.therapists.map(function(therapist){
           return (
-            <div className="Therapist-container" key={therapist.id}>
-              <span className="Therapist-name">{therapist.name}</span>
-              <span className="Therapist-tel">{therapist.tel}</span>
-              <input className="Therapist-selector" type="radio" name="therapist" value={therapist.id} required/>
+            <div className="Therapist__container" key={therapist.id}>
+              <span className="Therapist__name">{therapist.name}</span>
+              <span className="Therapist__tel">{therapist.tel}</span>
+              <input className="Therapist__selector" type="radio" name="therapist" value={therapist.id} required/>
             </div>
           );
         })}
@@ -37,7 +37,7 @@ class TherapistPicker extends React.Component {
 
     return (
       <div className="TherapistPicker">
-        <div className="TherapistPicker-container">
+        <div className="TherapistPicker__container">
           {this.state.therapistSlected === false ? therapistSelectionForm : (<div>Thank You for choosing a therapist</div>) }
         </div>
       </div>
